@@ -12,7 +12,7 @@ type cases = [
 ]
 
 // ============= Your Code Here =============
-type IndexOf<T extends unknown[], U, R extends unknown[] = []> = T extends [infer First, ...infer Rest]
+export type IndexOf<T extends unknown[], U, R extends unknown[] = []> = T extends [infer First, ...infer Rest]
   ? Equal<U, First> extends true
     ? R['length']
     : IndexOf<Rest, U, [...R, First]>
